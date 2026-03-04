@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OBS Stream Music Viewer — Now Playing Widget for OBS</title>
-  <meta name="description" content="A real-time Now Playing widget for OBS. Displays current music from Apple Music, Spotify, and more with album artwork. Zero dependencies — single .exe." />
+  <meta name="description"
+    content="A real-time Now Playing widget for OBS. Displays current music from Apple Music, Spotify, and more with album artwork. Zero dependencies — single .exe." />
   <meta property="og:title" content="OBS Stream Music Viewer" />
   <meta property="og:description" content="Real-time music widget for OBS streamers. One executable, zero setup." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="img/logo.png" type="image/png" />
 </head>
+
 <body>
 
   <!-- WebGL Background -->
@@ -29,24 +32,34 @@
         <li>
           <a href="https://github.com/StreamMusicViewer" target="_blank" title="GitHub Organization">
             <!-- GitHub icon -->
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+            </svg>
             Organization
           </a>
         </li>
         <li>
-          <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer" target="_blank" title="GitHub Repository">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>
+          <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer" target="_blank"
+            title="GitHub Repository">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+            </svg>
             Repository
           </a>
         </li>
         <li>
           <a href="https://github.com/Ulyxx3" target="_blank" title="Developer profile">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+            </svg>
             @Ulyxx3
           </a>
         </li>
         <li>
-          <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer/releases/latest" target="_blank" class="btn-download" id="nav-download">
+          <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer/releases/latest" target="_blank"
+            class="btn-download" id="nav-download">
             ⬇ Download
           </a>
         </li>
@@ -64,21 +77,25 @@
         <div class="hero-content">
           <div class="hero-badge">Live on Stream</div>
           <h1 class="hero-title">
-            Your Music.<br/>
-            <span class="accent">On Stream.</span><br/>
+            Your Music.<br />
+            <span class="accent">On Stream.</span><br />
             Perfectly.
           </h1>
           <p class="hero-desc">
-            A real-time <strong>Now Playing</strong> widget for OBS that detects your current music from Apple Music, Spotify, Chrome, and more — with album artwork, smooth animations, and zero dependencies.
+            A real-time <strong>Now Playing</strong> widget for OBS that detects your current music from Apple Music,
+            Spotify, Chrome, and more — with album artwork, smooth animations, and zero dependencies.
           </p>
           <div class="hero-cta">
-            <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer/releases/latest" target="_blank" id="hero-download">
+            <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer/releases/latest" target="_blank"
+              id="hero-download">
               <button class="ihb ihb-primary" aria-label="Download latest release">
                 <span class="ihb-blob"></span>
                 <span class="ihb-text">⬇ Download</span>
                 <span class="ihb-hover">
                   Get it free
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
                 </span>
               </button>
             </a>
@@ -88,7 +105,9 @@
                 <span class="ihb-text">View on GitHub</span>
                 <span class="ihb-hover">
                   Open source
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
                 </span>
               </button>
             </a>
@@ -106,12 +125,15 @@
             </div>
             <div class="widget-preview">
               <div class="wp-art">
-                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=144&h=144&fit=crop&crop=center" alt="Album art preview" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=144&h=144&fit=crop&crop=center"
+                  alt="Album art preview" loading="lazy" />
               </div>
               <div class="wp-info">
                 <div class="wp-title">Midnight City</div>
                 <div class="wp-artist">M83</div>
-                <div class="wp-bar"><div class="wp-bar-fill"></div></div>
+                <div class="wp-bar">
+                  <div class="wp-bar-fill"></div>
+                </div>
               </div>
             </div>
             <div class="obs-source-label">
@@ -132,32 +154,33 @@
       <div class="section-header">
         <span class="section-eyebrow">Under the Hood</span>
         <h2 class="section-title">How It Works</h2>
-        <p class="section-subtitle">A lightweight pipeline from your music app to your stream, with no configuration required.</p>
+        <p class="section-subtitle">A lightweight pipeline from your music app to your stream, with no configuration
+          required.</p>
       </div>
       <div class="flow" id="flow">
         <div class="flow-step">
           <div class="flow-icon">🎵</div>
-          <span class="flow-label">Apple Music<br/>Spotify · Chrome</span>
+          <span class="flow-label">Apple Music<br />Spotify · Chrome</span>
         </div>
         <div class="flow-arrow">›</div>
         <div class="flow-step">
           <div class="flow-icon">🪟</div>
-          <span class="flow-label">Windows<br/>Media API</span>
+          <span class="flow-label">Windows<br />Media API</span>
         </div>
         <div class="flow-arrow">›</div>
         <div class="flow-step">
           <div class="flow-icon">⚙️</div>
-          <span class="flow-label">StreamMusic<br/>Viewer .exe</span>
+          <span class="flow-label">StreamMusic<br />Viewer .exe</span>
         </div>
         <div class="flow-arrow">›</div>
         <div class="flow-step">
           <div class="flow-icon">📄</div>
-          <span class="flow-label">current_song<br/>.json</span>
+          <span class="flow-label">current_song<br />.json</span>
         </div>
         <div class="flow-arrow">›</div>
         <div class="flow-step">
           <div class="flow-icon">🌐</div>
-          <span class="flow-label">index.html<br/>Browser Source</span>
+          <span class="flow-label">index.html<br />Browser Source</span>
         </div>
         <div class="flow-arrow">›</div>
         <div class="flow-step">
@@ -171,17 +194,21 @@
         <div class="feature-card">
           <div class="feature-icon">🔍</div>
           <div class="feature-title">Detection</div>
-          <div class="feature-desc">The .exe uses the Windows <code>GlobalSystemMediaTransportControlsSessionManager</code> API to reliably read the currently playing track — even when minimized.</div>
+          <div class="feature-desc">The .exe uses the Windows
+            <code>GlobalSystemMediaTransportControlsSessionManager</code> API to reliably read the currently playing
+            track — even when minimized.</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">💾</div>
           <div class="feature-title">JSON Export</div>
-          <div class="feature-desc">Track info and album artwork (as base64) are written to <code>current_song.json</code> every second, acting as a lightweight local data bridge.</div>
+          <div class="feature-desc">Track info and album artwork (as base64) are written to
+            <code>current_song.json</code> every second, acting as a lightweight local data bridge.</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">✨</div>
           <div class="feature-title">Live Widget</div>
-          <div class="feature-desc">The OBS Browser Source polls the JSON file and renders a sleek, glassmorphism card with smooth fade transitions on every song change.</div>
+          <div class="feature-desc">The OBS Browser Source polls the JSON file and renders a sleek, glassmorphism card
+            with smooth fade transitions on every song change.</div>
         </div>
       </div>
     </div>
@@ -201,32 +228,38 @@
         <div class="feature-card">
           <div class="feature-icon">⚡</div>
           <div class="feature-title">Real-time Updates</div>
-          <div class="feature-desc">The widget polls every second. Your viewers see the new song almost instantly, with smooth crossfade transitions.</div>
+          <div class="feature-desc">The widget polls every second. Your viewers see the new song almost instantly, with
+            smooth crossfade transitions.</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🖼️</div>
           <div class="feature-title">Album Artwork</div>
-          <div class="feature-desc">Full-resolution album covers are extracted and displayed alongside the track info. Falls back gracefully to a music icon if unavailable.</div>
+          <div class="feature-desc">Full-resolution album covers are extracted and displayed alongside the track info.
+            Falls back gracefully to a music icon if unavailable.</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🎯</div>
           <div class="feature-title">Multi-app Support</div>
-          <div class="feature-desc">Works with Apple Music, Spotify, YouTube Music, Chrome, Edge, and any app that integrates with the Windows Media Control system.</div>
+          <div class="feature-desc">Works with Apple Music, Spotify, YouTube Music, Chrome, Edge, and any app that
+            integrates with the Windows Media Control system.</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">📦</div>
           <div class="feature-title">Zero Dependencies</div>
-          <div class="feature-desc">A single self-contained .exe file. No Python. No Node.js. No installers. Download, double-click, done.</div>
+          <div class="feature-desc">A single self-contained .exe file. No Python. No Node.js. No installers. Download,
+            double-click, done.</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🎨</div>
           <div class="feature-title">Glassmorphism Design</div>
-          <div class="feature-desc">The OBS widget features a sleek dark backdrop, frosted glass effect, and polished typography that looks great on any stream layout.</div>
+          <div class="feature-desc">The OBS widget features a sleek dark backdrop, frosted glass effect, and polished
+            typography that looks great on any stream layout.</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">✏️</div>
           <div class="feature-title">Fully Customizable</div>
-          <div class="feature-desc">Edit <code>style.css</code> to change colors, sizes, artwork dimensions, animations — make the widget match your stream's aesthetic.</div>
+          <div class="feature-desc">Edit <code>style.css</code> to change colors, sizes, artwork dimensions, animations
+            — make the widget match your stream's aesthetic.</div>
         </div>
       </div>
     </div>
@@ -242,18 +275,22 @@
           <span class="status-dot"></span>
           Latest Release
         </div>
-        <h2 class="download-title">Ready to Elevate<br/>Your Stream?</h2>
+        <h2 class="download-title">Ready to Elevate<br />Your Stream?</h2>
         <p class="download-subtitle">
           Drop the widget into OBS in under 2 minutes. No coding required. MIT license — free forever.
         </p>
         <div class="download-actions">
-          <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer/releases/latest" target="_blank" id="cta-download">
-            <button class="ihb ihb-primary" style="padding:14px 36px;font-size:1rem;" aria-label="Download latest release">
+          <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer/releases/latest" target="_blank"
+            id="cta-download">
+            <button class="ihb ihb-primary" style="padding:14px 36px;font-size:1rem;"
+              aria-label="Download latest release">
               <span class="ihb-blob"></span>
               <span class="ihb-text">⬇ Download .exe</span>
               <span class="ihb-hover">
                 Get it free
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </span>
             </button>
           </a>
@@ -263,7 +300,9 @@
               <span class="ihb-text">★ Star on GitHub</span>
               <span class="ihb-hover">
                 View source
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </span>
             </button>
           </a>
@@ -294,7 +333,8 @@
         <li><a href="https://github.com/StreamMusicViewer" target="_blank">Organization</a></li>
         <li><a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer" target="_blank">Repository</a></li>
         <li><a href="https://github.com/Ulyxx3" target="_blank">@Ulyxx3</a></li>
-        <li><a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer/releases/latest" target="_blank">Releases</a></li>
+        <li><a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer/releases" target="_blank">Releases</a>
+        </li>
       </ul>
       <p class="footer-copy">© 2025 Ulyxx3 · MIT License</p>
     </div>
@@ -317,4 +357,5 @@
     document.querySelectorAll('.flow-step, .feature-card').forEach(el => io.observe(el));
   </script>
 </body>
+
 </html>
