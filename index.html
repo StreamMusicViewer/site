@@ -40,26 +40,23 @@
           </a>
         </li>
         <li>
-          <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer" target="_blank"
-            title="GitHub Repository">
+          <a href="https://github.com/StreamMusicViewer/OSMV" target="_blank" title="OSMV (Full) Repository">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
             </svg>
-            Repository
+            OSMV (Full)
           </a>
         </li>
         <li>
-          <a href="https://github.com/Ulyxx3" target="_blank" title="Developer profile">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+          <a href="https://github.com/StreamMusicViewer/OSMV-lite" target="_blank" title="OSMV Lite Repository">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
             </svg>
-            @Ulyxx3
+            OSMV Lite
           </a>
         </li>
         <li>
-          <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer/releases/latest" target="_blank"
-            class="btn-download" id="nav-download">
+          <a href="#download" class="btn-download" id="nav-download">
             ⬇ Download
           </a>
         </li>
@@ -86,8 +83,7 @@
             Spotify, Chrome, and more — with album artwork, smooth animations, and zero dependencies.
           </p>
           <div class="hero-cta">
-            <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer/releases/latest" target="_blank"
-              id="hero-download">
+            <a href="#download" id="hero-download">
               <button class="ihb ihb-primary" aria-label="Download latest release">
                 <span class="ihb-blob"></span>
                 <span class="ihb-text">⬇ Download</span>
@@ -99,7 +95,7 @@
                 </span>
               </button>
             </a>
-            <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer" target="_blank" id="hero-github">
+            <a href="https://github.com/StreamMusicViewer" target="_blank" id="hero-github">
               <button class="ihb ihb-ghost" aria-label="View source on GitHub">
                 <span class="ihb-blob"></span>
                 <span class="ihb-text">View on GitHub</span>
@@ -196,13 +192,15 @@
           <div class="feature-title">Detection</div>
           <div class="feature-desc">The .exe uses the Windows
             <code>GlobalSystemMediaTransportControlsSessionManager</code> API to reliably read the currently playing
-            track — even when minimized.</div>
+            track — even when minimized.
+          </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">💾</div>
           <div class="feature-title">JSON Export</div>
           <div class="feature-desc">Track info and album artwork (as base64) are written to
-            <code>current_song.json</code> every second, acting as a lightweight local data bridge.</div>
+            <code>current_song.json</code> every second, acting as a lightweight local data bridge.
+          </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">✨</div>
@@ -270,52 +268,103 @@
   ══════════════════════════════ -->
   <section id="download">
     <div class="container">
-      <div class="download-card">
-        <div class="download-badge">
-          <span class="status-dot"></span>
-          Latest Release
-        </div>
-        <h2 class="download-title">Ready to Elevate<br />Your Stream?</h2>
-        <p class="download-subtitle">
-          Drop the widget into OBS in under 2 minutes. No coding required. MIT license — free forever.
+      <div class="section-header" style="margin-bottom: 40px;">
+        <span class="section-eyebrow">Get Started</span>
+        <h2 class="section-title">Ready to Elevate Your Stream?</h2>
+        <p class="section-subtitle">
+          Choose the version that best fits your needs. Both are open source, MIT licensed, and free forever.
         </p>
-        <div class="download-actions">
-          <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer/releases/latest" target="_blank"
-            id="cta-download">
-            <button class="ihb ihb-primary" style="padding:14px 36px;font-size:1rem;"
-              aria-label="Download latest release">
-              <span class="ihb-blob"></span>
-              <span class="ihb-text">⬇ Download .exe</span>
-              <span class="ihb-hover">
-                Get it free
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
-          </a>
-          <a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer" target="_blank" id="cta-github">
-            <button class="ihb ihb-ghost" style="padding:14px 36px;font-size:1rem;" aria-label="View source on GitHub">
-              <span class="ihb-blob"></span>
-              <span class="ihb-text">★ Star on GitHub</span>
-              <span class="ihb-hover">
-                View source
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
-          </a>
+      </div>
+
+      <div class="download-grid">
+        <!-- Full Version -->
+        <div class="download-card"
+          style="padding: 48px 36px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="download-badge">
+              <span class="status-dot"></span>
+              OSMV (Full)
+            </div>
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; color: var(--white);">Full Experience
+            </h3>
+            <p class="download-subtitle" style="margin-bottom: 24px;">
+              The complete Now Playing widget with album artwork extraction, robust background tracking, and advanced
+              formatting.
+            </p>
+          </div>
+          <div>
+            <div class="download-actions">
+              <a href="https://github.com/StreamMusicViewer/OSMV/releases/download/v2.5.0/OSMV_v2.3.0.zip"
+                target="_blank" id="cta-download-full">
+                <button class="ihb ihb-primary" style="padding:14px 28px;font-size:1rem;" aria-label="Download Full">
+                  <span class="ihb-blob"></span>
+                  <span class="ihb-text">⬇ Download Full</span>
+                  <span class="ihb-hover">Get it free <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                      stroke="currentColor" stroke-width="2.5" style="margin-left:8px;">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </button>
+              </a>
+              <a href="https://github.com/StreamMusicViewer/OSMV" target="_blank" id="cta-github-full">
+                <button class="ihb ihb-ghost" style="padding:14px 28px;font-size:1rem;" aria-label="Source code">
+                  <span class="ihb-blob"></span>
+                  <span class="ihb-text">★ Source</span>
+                  <span class="ihb-hover">GitHub <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                      stroke="currentColor" stroke-width="2.5" style="margin-left:8px;">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </button>
+              </a>
+            </div>
+            <p class="download-info" style="margin-bottom: 0;">Windows 10/11 <span>·</span> .NET 8 <span>·</span> MIT
+            </p>
+          </div>
         </div>
-        <p class="download-info">
-          Windows 10/11 only
-          <span>·</span>
-          .NET 8 included
-          <span>·</span>
-          MIT License
-          <span>·</span>
-          Open Source
-        </p>
+
+        <!-- Lite Version -->
+        <div class="download-card"
+          style="padding: 48px 36px; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="download-badge"
+              style="color: var(--blue-light); border-color: rgba(79, 195, 247, 0.3); background: rgba(79, 195, 247, 0.1);">
+              <span class="status-dot" style="background: var(--blue-light);"></span>
+              OSMV Lite
+            </div>
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; color: var(--white);">Lightweight</h3>
+            <p class="download-subtitle" style="margin-bottom: 24px;">
+              A minimal version with extremely low resource usage. Essential core features for maximum broadcast
+              performance.
+            </p>
+          </div>
+          <div>
+            <div class="download-actions">
+              <a href="https://github.com/StreamMusicViewer/OSMV-lite/releases/download/v2.2.1/OBS_StreamMusicViewer_v2.2.1.zip"
+                target="_blank" id="cta-download-lite">
+                <button class="ihb ihb-primary"
+                  style="padding:14px 28px;font-size:1rem; border-color: var(--blue-light);" aria-label="Download Lite">
+                  <span class="ihb-blob" style="background: var(--blue-light);"></span>
+                  <span class="ihb-text">⬇ Download Lite</span>
+                  <span class="ihb-hover">Get it free <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                      stroke="currentColor" stroke-width="2.5" style="margin-left:8px;">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </button>
+              </a>
+              <a href="https://github.com/StreamMusicViewer/OSMV-lite" target="_blank" id="cta-github-lite">
+                <button class="ihb ihb-ghost" style="padding:14px 28px;font-size:1rem;" aria-label="Source code">
+                  <span class="ihb-blob"></span>
+                  <span class="ihb-text">★ Source</span>
+                  <span class="ihb-hover">GitHub <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                      stroke="currentColor" stroke-width="2.5" style="margin-left:8px;">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></span>
+                </button>
+              </a>
+            </div>
+            <p class="download-info" style="margin-bottom: 0;">Windows 10/11 <span>·</span> .NET 8 <span>·</span> MIT
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -331,10 +380,9 @@
       </div>
       <ul class="footer-links">
         <li><a href="https://github.com/StreamMusicViewer" target="_blank">Organization</a></li>
-        <li><a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer" target="_blank">Repository</a></li>
+        <li><a href="https://github.com/StreamMusicViewer/OSMV" target="_blank">OSMV (Full)</a></li>
+        <li><a href="https://github.com/StreamMusicViewer/OSMV-lite" target="_blank">OSMV Lite</a></li>
         <li><a href="https://github.com/Ulyxx3" target="_blank">@Ulyxx3</a></li>
-        <li><a href="https://github.com/StreamMusicViewer/OBS-StreamMusicViewer/releases" target="_blank">Releases</a>
-        </li>
       </ul>
       <p class="footer-copy">© 2025 Ulyxx3 · MIT License</p>
     </div>
