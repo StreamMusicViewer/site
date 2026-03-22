@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OBS Stream Music Viewer — Now Playing Widget for OBS</title>
   <meta name="description"
-    content="A real-time Now Playing widget for OBS. Displays current music from Apple Music, Spotify, and more with album artwork. Zero dependencies — single .exe." />
+    content="A real-time Now Playing widget for OBS. Powered by Rust for maximum performance. Displays music from Apple Music, Spotify, and more with album artwork and Discord Rich Presence." />
   <meta property="og:title" content="OBS Stream Music Viewer" />
-  <meta property="og:description" content="Real-time music widget for OBS streamers. One executable, zero setup." />
+  <meta property="og:description"
+    content="Modern, lightweight music widget for OBS streamers. Completely native, zero dependencies." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="img/logo.png" type="image/png" />
@@ -80,7 +81,8 @@
           </h1>
           <p class="hero-desc">
             A real-time <strong>Now Playing</strong> widget for OBS that detects your current music from Apple Music,
-            Spotify, Chrome, and more — with album artwork, smooth animations, and zero dependencies.
+            Spotify, Chrome, and more — with album artwork, <strong>Discord Rich Presence</strong>, and an integrated
+            audio visualizer.
           </p>
           <div class="hero-cta">
             <a href="#download" id="hero-download">
@@ -166,7 +168,7 @@
         <div class="flow-arrow">›</div>
         <div class="flow-step">
           <div class="flow-icon">⚙️</div>
-          <span class="flow-label">StreamMusic<br />Viewer .exe</span>
+          <span class="flow-label">OSMV Core<br />(Rust Native)</span>
         </div>
         <div class="flow-arrow">›</div>
         <div class="flow-step">
@@ -190,9 +192,8 @@
         <div class="feature-card">
           <div class="feature-icon">🔍</div>
           <div class="feature-title">Detection</div>
-          <div class="feature-desc">The .exe uses the Windows
-            <code>GlobalSystemMediaTransportControlsSessionManager</code> API to reliably read the currently playing
-            track — even when minimized.
+          <div class="feature-desc">The Rust core uses high-performance system APIs (WinRT on Windows, MPRIS on Linux)
+            to reliably read media info — even when minimized.
           </div>
         </div>
         <div class="feature-card">
@@ -232,32 +233,38 @@
         <div class="feature-card">
           <div class="feature-icon">🖼️</div>
           <div class="feature-title">Album Artwork</div>
-          <div class="feature-desc">Full-resolution album covers are extracted and displayed alongside the track info.
-            Falls back gracefully to a music icon if unavailable.</div>
+          <div class="feature-desc">High-res covers are extracted automatically. New: <strong>iTunes API
+              integration</strong> for high-quality fallback artwork in Discord.</div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🎯</div>
-          <div class="feature-title">Multi-app Support</div>
-          <div class="feature-desc">Works with Apple Music, Spotify, YouTube Music, Chrome, Edge, and any app that
-            integrates with the Windows Media Control system.</div>
+          <div class="feature-icon">👾</div>
+          <div class="feature-title">Discord RPC+</div>
+          <div class="feature-desc">Showcase your music on Discord with status badges (Playing/Paused) and high-quality
+            album art directly in your profile.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌈</div>
+          <div class="feature-title">Dynamic Color</div>
+          <div class="feature-desc">Optional <strong>Adaptive UI</strong>: The widget and visualizer can automatically
+            match their color palette to the current album artwork.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <div class="feature-title">Audio Visualizer</div>
+          <div class="feature-desc">Integrated real-time FFT visualizer (beta) that brings your music to life with
+            smooth, reactive animations.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🦀</div>
+          <div class="feature-title">Rust Powered</div>
+          <div class="feature-desc">Completely rewritten in Rust for better stability, lower CPU usage, and native
+            <strong>Linux (MPRIS)</strong> support.</div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">📦</div>
           <div class="feature-title">Zero Dependencies</div>
-          <div class="feature-desc">A single self-contained .exe file. No Python. No Node.js. No installers. Download,
-            double-click, done.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎨</div>
-          <div class="feature-title">Glassmorphism Design</div>
-          <div class="feature-desc">The OBS widget features a sleek dark backdrop, frosted glass effect, and polished
-            typography that looks great on any stream layout.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">✏️</div>
-          <div class="feature-title">Fully Customizable</div>
-          <div class="feature-desc">Edit <code>style.css</code> to change colors, sizes, artwork dimensions, animations
-            — make the widget match your stream's aesthetic.</div>
+          <div class="feature-desc">Single self-contained binary. No .NET, No Python, No Node.js. Just download and run.
+          </div>
         </div>
       </div>
     </div>
@@ -294,11 +301,11 @@
           </div>
           <div>
             <div class="download-actions">
-              <a href="https://github.com/StreamMusicViewer/OSMV/releases/download/v2.5.0/OSMV_v2.3.0.zip"
-                target="_blank" id="cta-download-full">
+              <a href="https://github.com/StreamMusicViewer/OSMV/releases/latest" target="_blank"
+                id="cta-download-full">
                 <button class="ihb ihb-primary" style="padding:14px 28px;font-size:1rem;" aria-label="Download Full">
                   <span class="ihb-blob"></span>
-                  <span class="ihb-text">⬇ Download Full</span>
+                  <span class="ihb-text">⬇ Download v4.0.0</span>
                   <span class="ihb-hover">Get it free <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
                       stroke="currentColor" stroke-width="2.5" style="margin-left:8px;">
                       <path d="M5 12h14M12 5l7 7-7 7" />
@@ -316,7 +323,8 @@
                 </button>
               </a>
             </div>
-            <p class="download-info" style="margin-bottom: 0;">Windows 10/11 <span>·</span> .NET 8 <span>·</span> MIT
+            <p class="download-info" style="margin-bottom: 0;">Windows 10/11 <span>·</span> Linux (MPRIS) <span>·</span>
+              Rust Native <span>·</span> MIT
             </p>
           </div>
         </div>
@@ -361,7 +369,8 @@
                 </button>
               </a>
             </div>
-            <p class="download-info" style="margin-bottom: 0;">Windows 10/11 <span>·</span> .NET 8 <span>·</span> MIT
+            <p class="download-info" style="margin-bottom: 0;">Windows 10/11 <span>·</span> Rust Native <span>·</span>
+              MIT
             </p>
           </div>
         </div>
