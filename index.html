@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OBS Stream Music Viewer — Now Playing Widget for OBS</title>
+  <title>OBS Stream Music Viewer (OSMV) — Ultra-Lightweight Suite for OBS</title>
   <meta name="description"
-    content="A real-time Now Playing widget for OBS. Powered by Rust for maximum performance. Displays music from Apple Music, Spotify, and more with album artwork and Discord Rich Presence." />
-  <meta property="og:title" content="OBS Stream Music Viewer" />
+    content="OSMV v5.0.0: An ultra-lightweight native C++20 suite for OBS Studio (~4.5 MB daemon RAM). Now Playing widget, Discord Rich Presence, Timers, System Info, Dynamic Files, and Twitch Helix." />
+  <meta property="og:title" content="OBS Stream Music Viewer (OSMV v5.0.0)" />
   <meta property="og:description"
-    content="Modern, lightweight music widget for OBS streamers. Completely native, zero dependencies." />
+    content="Modern, ultra-low RAM C++20 music & overlay suite for OBS streamers on Windows and Linux." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="img/logo.png" type="image/png" />
@@ -32,7 +32,6 @@
       <ul class="nav-links">
         <li>
           <a href="https://github.com/StreamMusicViewer" target="_blank" title="GitHub Organization">
-            <!-- GitHub icon -->
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path
                 d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
@@ -41,24 +40,30 @@
           </a>
         </li>
         <li>
-          <a href="https://github.com/StreamMusicViewer/OSMV" target="_blank" title="OSMV (Full) Repository">
+          <a href="https://github.com/StreamMusicViewer/OSMV" target="_blank" title="OSMV Repository">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
             </svg>
-            OSMV (Full)
+            OSMV
           </a>
         </li>
         <li>
-          <a href="https://github.com/StreamMusicViewer/OSMV-lite" target="_blank" title="OSMV Lite Repository">
+          <a href="https://streammusicviewer.github.io/OSMV/" target="_blank" title="Documentation">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+              <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
             </svg>
-            OSMV Lite
+            Docs
           </a>
         </li>
         <li>
           <a href="#download" class="btn-download" id="nav-download">
-            ⬇ Download
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download
           </a>
         </li>
       </ul>
@@ -73,22 +78,22 @@
       <div class="hero-inner">
         <!-- Left: Text -->
         <div class="hero-content">
-          <div class="hero-badge">Live on Stream</div>
+          <div class="hero-badge">v5.0.0 · Native C++20</div>
           <h1 class="hero-title">
             Your Music.<br />
             <span class="accent">On Stream.</span><br />
-            Perfectly.
+            Ultra-Light.
           </h1>
           <p class="hero-desc">
-            A real-time <strong>Now Playing</strong> widget for OBS that detects your current music from Apple Music,
-            Spotify, Chrome, and more — with album artwork, <strong>Discord Rich Presence</strong>, and an integrated
-            audio visualizer.
+            A complete, ultra-low RAM <strong>C++20</strong> companion for OBS Studio — featuring real-time
+            <strong>Now Playing</strong> overlays, <strong>Discord Rich Presence</strong>, and Snaz-inspired tools
+            (Time, Date, Timers, System Info, Dynamic Files, and Twitch Helix) in a ~4.5 MB background daemon.
           </p>
           <div class="hero-cta">
             <a href="#download" id="hero-download">
               <button class="ihb ihb-primary" aria-label="Download latest release">
                 <span class="ihb-blob"></span>
-                <span class="ihb-text">⬇ Download</span>
+                <span class="ihb-text">Download v5.0.0</span>
                 <span class="ihb-hover">
                   Get it free
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -97,12 +102,12 @@
                 </span>
               </button>
             </a>
-            <a href="https://github.com/StreamMusicViewer" target="_blank" id="hero-github">
-              <button class="ihb ihb-ghost" aria-label="View source on GitHub">
+            <a href="https://streammusicviewer.github.io/OSMV/" target="_blank" id="hero-docs">
+              <button class="ihb ihb-ghost" aria-label="Read documentation">
                 <span class="ihb-blob"></span>
-                <span class="ihb-text">View on GitHub</span>
+                <span class="ihb-text">Documentation</span>
                 <span class="ihb-hover">
-                  Open source
+                  Open docs
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
@@ -119,7 +124,7 @@
               <div class="obs-dot red"></div>
               <div class="obs-dot yellow"></div>
               <div class="obs-dot green"></div>
-              <span class="obs-label">OBS Browser Source — 500×140</span>
+              <span class="obs-label">OBS Browser Source — 500x140</span>
             </div>
             <div class="widget-preview">
               <div class="wp-art">
@@ -136,7 +141,7 @@
             </div>
             <div class="obs-source-label">
               <div class="status-dot"></div>
-              Live in OBS · Updates every second
+              Live in OBS · ~4.5 MB Daemon RAM
             </div>
           </div>
         </div>
@@ -152,37 +157,79 @@
       <div class="section-header">
         <span class="section-eyebrow">Under the Hood</span>
         <h2 class="section-title">How It Works</h2>
-        <p class="section-subtitle">A lightweight pipeline from your music app to your stream, with no configuration
-          required.</p>
+        <p class="section-subtitle">A dual-process C++20 pipeline built for minimum memory and zero idle CPU impact.</p>
       </div>
       <div class="flow" id="flow">
         <div class="flow-step">
-          <div class="flow-icon">🎵</div>
-          <span class="flow-label">Apple Music<br />Spotify · Chrome</span>
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 18V5l12-2v13" />
+              <circle cx="6" cy="18" r="3" />
+              <circle cx="18" cy="16" r="3" />
+            </svg>
+          </div>
+          <span class="flow-label">Apple Music<br />Spotify · Browsers</span>
         </div>
-        <div class="flow-arrow">›</div>
+        <div class="flow-arrow">&rsaquo;</div>
         <div class="flow-step">
-          <div class="flow-icon">🪟</div>
-          <span class="flow-label">Windows<br />Media API</span>
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <span class="flow-label">WinRT SMTC<br />D-Bus MPRIS</span>
         </div>
-        <div class="flow-arrow">›</div>
+        <div class="flow-arrow">&rsaquo;</div>
         <div class="flow-step">
-          <div class="flow-icon">⚙️</div>
-          <span class="flow-label">OSMV Core<br />(Rust Native)</span>
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="4" y="4" width="16" height="16" rx="2" />
+              <rect x="9" y="9" width="6" height="6" />
+              <line x1="9" y1="1" x2="9" y2="4" />
+              <line x1="15" y1="1" x2="15" y2="4" />
+              <line x1="9" y1="20" x2="9" y2="23" />
+              <line x1="15" y1="20" x2="15" y2="23" />
+              <line x1="20" y1="9" x2="23" y2="9" />
+              <line x1="20" y1="14" x2="23" y2="14" />
+              <line x1="1" y1="9" x2="4" y2="9" />
+              <line x1="1" y1="14" x2="4" y2="14" />
+            </svg>
+          </div>
+          <span class="flow-label">OSMV Daemon<br />(C++20 Native)</span>
         </div>
-        <div class="flow-arrow">›</div>
+        <div class="flow-arrow">&rsaquo;</div>
         <div class="flow-step">
-          <div class="flow-icon">📄</div>
-          <span class="flow-label">current_song<br />.json</span>
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+            </svg>
+          </div>
+          <span class="flow-label">JSON &amp; .txt<br />Atomic Exports</span>
         </div>
-        <div class="flow-arrow">›</div>
+        <div class="flow-arrow">&rsaquo;</div>
         <div class="flow-step">
-          <div class="flow-icon">🌐</div>
-          <span class="flow-label">index.html<br />Browser Source</span>
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+            </svg>
+          </div>
+          <span class="flow-label">OBS Browser<br />&amp; Text Sources</span>
         </div>
-        <div class="flow-arrow">›</div>
+        <div class="flow-arrow">&rsaquo;</div>
         <div class="flow-step">
-          <div class="flow-icon">📺</div>
+          <div class="flow-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="23 7 16 12 23 17 23 7" />
+              <rect x="1" y="5" width="15" height="14" rx="2" />
+            </svg>
+          </div>
           <span class="flow-label">Your Stream</span>
         </div>
       </div>
@@ -190,24 +237,41 @@
       <!-- Step descriptions -->
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;">
         <div class="feature-card">
-          <div class="feature-icon">🔍</div>
-          <div class="feature-title">Detection</div>
-          <div class="feature-desc">The Rust core uses high-performance system APIs (WinRT on Windows, MPRIS on Linux)
-            to reliably read media info — even when minimized.
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </div>
+          <div class="feature-title">Native Detection</div>
+          <div class="feature-desc">The C++20 daemon polls native OS APIs (WinRT SMTC on Windows, libdbus-1 MPRIS on
+            Linux) with track-change artwork caching so identical tracks cause zero unnecessary reads.
           </div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">💾</div>
-          <div class="feature-title">JSON Export</div>
-          <div class="feature-desc">Track info and album artwork (as base64) are written to
-            <code>current_song.json</code> every second, acting as a lightweight local data bridge.
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z" />
+              <polyline points="17 21 17 13 7 13 7 21" />
+              <polyline points="7 3 7 8 15 8" />
+            </svg>
+          </div>
+          <div class="feature-title">Atomic JSON &amp; Text Exports</div>
+          <div class="feature-desc">Updates <code>current_song.json</code> and Snaz-style <code>.txt</code> files
+            (Time, Date, Countdown, Chronos, System Info, Textline, Twitch) only when values change.
           </div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">✨</div>
-          <div class="feature-title">Live Widget</div>
-          <div class="feature-desc">The OBS Browser Source polls the JSON file and renders a sleek, glassmorphism card
-            with smooth fade transitions on every song change.</div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18" />
+              <path d="M9 21V9" />
+            </svg>
+          </div>
+          <div class="feature-title">Headless UI Separation</div>
+          <div class="feature-desc">Configure everything in a modern Dear ImGui window, then close it into Headless
+            Mode to free 100% of GUI memory while the ~4.5 MB daemon stays active in your tray.</div>
         </div>
       </div>
     </div>
@@ -221,51 +285,113 @@
       <div class="section-header">
         <span class="section-eyebrow">Features</span>
         <h2 class="section-title">Everything You Need</h2>
-        <p class="section-subtitle">Built for streamers who care about every detail of their broadcast.</p>
+        <p class="section-subtitle">Now Playing, Discord Rich Presence, and full Snaz-inspired overlays in one fast binary.</p>
       </div>
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon">⚡</div>
-          <div class="feature-title">Real-time Updates</div>
-          <div class="feature-desc">The widget polls every second. Your viewers see the new song almost instantly, with
-            smooth crossfade transitions.</div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+          </div>
+          <div class="feature-title">C++20 Ultra-Low RAM</div>
+          <div class="feature-desc">Rewritten from scratch in native C++20. The Windows daemon runs in ~4.5–6 MB private
+            RAM with delay-loaded DirectX, and Linux separates daemon and GUI binaries completely.</div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🖼️</div>
-          <div class="feature-title">Album Artwork</div>
-          <div class="feature-desc">High-res covers are extracted automatically. New: <strong>iTunes API
-              integration</strong> for high-quality fallback artwork in Discord.</div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+          </div>
+          <div class="feature-title">Album Artwork &amp; Exports</div>
+          <div class="feature-desc">Full-resolution cover art for OBS plus optional Snaz exports
+            (<code>TrackArtist.txt</code>, <code>TrackSong.txt</code>, <code>TrackAlbum.txt</code>,
+            <code>PlayingNow.txt</code>, and <code>track-info.json</code>).</div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">👾</div>
-          <div class="feature-title">Discord RPC+</div>
-          <div class="feature-desc">Showcase your music on Discord with status badges (Playing/Paused) and high-quality
-            album art directly in your profile.</div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 18v-6a9 9 0 0118 0v6" />
+              <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z" />
+            </svg>
+          </div>
+          <div class="feature-title">Discord RPC Listening</div>
+          <div class="feature-desc">Native C++ Discord IPC displaying a Listening activity (<code>type: 2</code>) with
+            iTunes artwork lookup, album metadata, and status badges.</div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🌈</div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 2a7 7 0 000 14 3 3 0 013 3v2" />
+              <circle cx="7.5" cy="10.5" r="1" />
+              <circle cx="12" cy="7.5" r="1" />
+              <circle cx="16.5" cy="10.5" r="1" />
+            </svg>
+          </div>
           <div class="feature-title">Dynamic Color</div>
-          <div class="feature-desc">Optional <strong>Adaptive UI</strong>: The widget and visualizer can automatically
-            match their color palette to the current album artwork.</div>
+          <div class="feature-desc">Optional <strong>Adaptive UI</strong>: the OBS Browser widget extracts dominant
+            colors from your album art and blends smoothly with every track.</div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">📊</div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
+          </div>
           <div class="feature-title">Audio Visualizer</div>
-          <div class="feature-desc">Integrated real-time FFT visualizer (beta) that brings your music to life with
-            smooth, reactive animations.</div>
+          <div class="feature-desc">Integrated animated visualizer bars above the OBS widget with matching hue
+            transitions and zero CPU overhead when hidden.</div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🦀</div>
-          <div class="feature-title">Rust Powered</div>
-          <div class="feature-desc">Completely rewritten in Rust for better stability, lower CPU usage, and native
-            <strong>Linux (MPRIS)</strong> support.
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
           </div>
+          <div class="feature-title">Time, Date &amp; Timers</div>
+          <div class="feature-desc">Live <code>Time.txt</code>, localized <code>Date.txt</code>, target-date
+            <strong>Countdown</strong>, <strong>Chrono Down</strong>, and <strong>Chrono Up</strong> with Start/Pause/Reset.</div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">📦</div>
-          <div class="feature-title">Zero Dependencies</div>
-          <div class="feature-desc">Single self-contained binary. No .NET, No Python, No Node.js. Just download and run.
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="4" y="4" width="16" height="16" rx="2" />
+              <rect x="9" y="9" width="6" height="6" />
+            </svg>
           </div>
+          <div class="feature-title">System Info</div>
+          <div class="feature-desc">Native CPU %, RAM usage/available, running process count, and upload/download rates
+            sampled directly from Windows APIs or Linux <code>/proc</code>.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+            </svg>
+          </div>
+          <div class="feature-title">Textline &amp; Dynamic Files</div>
+          <div class="feature-desc">Rotate custom messages automatically and fetch remote HTTP/HTTPS text or image URLs
+            on a dedicated background thread.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="7" width="20" height="15" rx="2" />
+              <polyline points="17 2 12 7 7 2" />
+            </svg>
+          </div>
+          <div class="feature-title">Twitch Helix &amp; Zero Bloat</div>
+          <div class="feature-desc">Export live viewer counts, search categories, and update your stream title/game.
+            Single standalone binary on Windows, native packages on Linux.</div>
         </div>
       </div>
     </div>
@@ -280,33 +406,33 @@
         <span class="section-eyebrow">Get Started</span>
         <h2 class="section-title">Ready to Elevate Your Stream?</h2>
         <p class="section-subtitle">
-          Choose the version that best fits your needs. Both are open source, MIT licensed, and free forever.
+          OSMV v5.0.0 unifies every feature into one ultra-light C++20 release—open source, MIT licensed, and free forever.
         </p>
       </div>
 
       <div class="download-grid">
-        <!-- Full Version -->
+        <!-- Main Version -->
         <div class="download-card"
           style="padding: 48px 36px; display: flex; flex-direction: column; justify-content: space-between;">
           <div>
             <div class="download-badge">
               <span class="status-dot"></span>
-              OSMV (Full)
+              Recommended · v5.0.0
             </div>
-            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; color: var(--white);">Full Experience
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; color: var(--white);">OSMV
             </h3>
             <p class="download-subtitle" style="margin-bottom: 24px;">
-              The complete Now Playing widget with color depending on the album cover, sound visualizer, Discord RPC
-              integration, and advanced formatting.
+              The complete C++20 suite: Now Playing widget, dynamic cover colors, visualizer, Discord RPC, Timers,
+              System Info, Dynamic Files, and Twitch Helix in a ~4.5 MB daemon.
             </p>
           </div>
           <div>
             <div class="download-actions">
               <a href="https://github.com/StreamMusicViewer/OSMV/releases/latest" target="_blank"
                 id="cta-download-full">
-                <button class="ihb ihb-primary" style="padding:14px 28px;font-size:1rem;" aria-label="Download Full">
+                <button class="ihb ihb-primary" style="padding:14px 28px;font-size:1rem;" aria-label="Download OSMV v5.0.0">
                   <span class="ihb-blob"></span>
-                  <span class="ihb-text">⬇ Download v4.0.0</span>
+                  <span class="ihb-text">Download v5.0.0</span>
                   <span class="ihb-hover">Get it free <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
                       stroke="currentColor" stroke-width="2.5" style="margin-left:8px;">
                       <path d="M5 12h14M12 5l7 7-7 7" />
@@ -316,7 +442,7 @@
               <a href="https://github.com/StreamMusicViewer/OSMV" target="_blank" id="cta-github-full">
                 <button class="ihb ihb-ghost" style="padding:14px 28px;font-size:1rem;" aria-label="Source code">
                   <span class="ihb-blob"></span>
-                  <span class="ihb-text">★ Source</span>
+                  <span class="ihb-text">Source</span>
                   <span class="ihb-hover">GitHub <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
                       stroke="currentColor" stroke-width="2.5" style="margin-left:8px;">
                       <path d="M5 12h14M12 5l7 7-7 7" />
@@ -324,45 +450,44 @@
                 </button>
               </a>
             </div>
-            <p class="download-info" style="margin-bottom: 0;">Windows 11 <span>·</span> Linux <span>·</span>
-              Rust <span>·</span> MIT
+            <p class="download-info" style="margin-bottom: 0;">Windows 10/11 <span>·</span> Linux <span>·</span>
+              C++20 <span>·</span> MIT
             </p>
           </div>
         </div>
 
-        <!-- Lite Version -->
+        <!-- Lite Version (Archived) -->
         <div class="download-card"
-          style="padding: 48px 36px; display: flex; flex-direction: column; justify-content: space-between;">
+          style="padding: 48px 36px; display: flex; flex-direction: column; justify-content: space-between; opacity: 0.78;">
           <div>
             <div class="download-badge"
-              style="color: var(--blue-light); border-color: rgba(79, 195, 247, 0.3); background: rgba(79, 195, 247, 0.1);">
-              <span class="status-dot" style="background: var(--blue-light);"></span>
-              OSMV Lite
+              style="color: var(--grey-mid); border-color: rgba(138, 155, 191, 0.35); background: rgba(138, 155, 191, 0.10);">
+              <span class="status-dot" style="background: var(--grey-mid); animation: none;"></span>
+              OSMV Lite · Archived
             </div>
-            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; color: var(--white);">Lightweight</h3>
+            <h3 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; color: var(--grey-light);">Archived</h3>
             <p class="download-subtitle" style="margin-bottom: 24px;">
-              A minimal version with extremely low resource usage. Essential core features for maximum broadcast
-              performance.
+              <strong>OSMV Lite is now archived.</strong> OSMV v5.0.0 was rewritten in native C++20 and now delivers the
+              entire feature set while using even less RAM than OSMV Lite.
             </p>
           </div>
           <div>
             <div class="download-actions">
-              <a href="https://github.com/StreamMusicViewer/OSMV-lite/releases/download/v2.2.1/OBS_StreamMusicViewer_v2.2.1.zip"
-                target="_blank" id="cta-download-lite">
+              <a href="https://streammusicviewer.github.io/OSMV/" target="_blank" id="cta-docs-archived">
                 <button class="ihb ihb-primary"
-                  style="padding:14px 28px;font-size:1rem; border-color: var(--blue-light);" aria-label="Download Lite">
+                  style="padding:14px 28px;font-size:1rem; border-color: var(--blue-light);" aria-label="Read OSMV v5.0.0 Docs">
                   <span class="ihb-blob" style="background: var(--blue-light);"></span>
-                  <span class="ihb-text">⬇ Download Lite</span>
-                  <span class="ihb-hover">Get it free <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                  <span class="ihb-text">Read v5.0.0 Docs</span>
+                  <span class="ihb-hover">Open docs <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
                       stroke="currentColor" stroke-width="2.5" style="margin-left:8px;">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg></span>
                 </button>
               </a>
               <a href="https://github.com/StreamMusicViewer/OSMV-lite" target="_blank" id="cta-github-lite">
-                <button class="ihb ihb-ghost" style="padding:14px 28px;font-size:1rem;" aria-label="Source code">
+                <button class="ihb ihb-ghost" style="padding:14px 28px;font-size:1rem;" aria-label="Archived repository">
                   <span class="ihb-blob"></span>
-                  <span class="ihb-text">★ Source</span>
+                  <span class="ihb-text">Archive</span>
                   <span class="ihb-hover">GitHub <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
                       stroke="currentColor" stroke-width="2.5" style="margin-left:8px;">
                       <path d="M5 12h14M12 5l7 7-7 7" />
@@ -370,8 +495,7 @@
                 </button>
               </a>
             </div>
-            <p class="download-info" style="margin-bottom: 0;">Windows 11 <span>·</span> C++ <span>·</span>
-              MIT
+            <p class="download-info" style="margin-bottom: 0;">Superseded by OSMV v5.0.0
             </p>
           </div>
         </div>
@@ -390,11 +514,12 @@
       </div>
       <ul class="footer-links">
         <li><a href="https://github.com/StreamMusicViewer" target="_blank">Organization</a></li>
-        <li><a href="https://github.com/StreamMusicViewer/OSMV" target="_blank">OSMV (Full)</a></li>
-        <li><a href="https://github.com/StreamMusicViewer/OSMV-lite" target="_blank">OSMV Lite</a></li>
+        <li><a href="https://github.com/StreamMusicViewer/OSMV" target="_blank">OSMV</a></li>
+        <li><a href="https://streammusicviewer.github.io/OSMV/" target="_blank">Docs</a></li>
+        <li><a href="https://github.com/StreamMusicViewer/OSMV-lite" target="_blank">OSMV Lite (Archived)</a></li>
         <li><a href="https://github.com/Ulyxx3" target="_blank">@Ulyxx3</a></li>
       </ul>
-      <p class="footer-copy">© 2025 Ulyxx3 · MIT License</p>
+      <p class="footer-copy">© 2026 Ulyxx3 · MIT License</p>
     </div>
   </footer>
 

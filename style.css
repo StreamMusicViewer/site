@@ -598,6 +598,12 @@ section {
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
+.flow-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--blue-light);
+}
+
 .flow-step:hover .flow-icon {
   transform: translateY(-6px);
   box-shadow: 0 16px 48px rgba(79, 195, 247, 0.15);
@@ -656,6 +662,12 @@ section {
   font-size: 1.8rem;
   margin-bottom: 14px;
   line-height: 1;
+  color: var(--blue-light);
+}
+
+.feature-icon svg {
+  width: 28px;
+  height: 28px;
 }
 
 .feature-title {
@@ -848,6 +860,18 @@ footer .container {
 
 .feature-card:nth-child(6) {
   transition-delay: 0.40s;
+}
+
+.feature-card:nth-child(7) {
+  transition-delay: 0.47s;
+}
+
+.feature-card:nth-child(8) {
+  transition-delay: 0.54s;
+}
+
+.feature-card:nth-child(9) {
+  transition-delay: 0.61s;
 }
 
 /* ── Responsive ──────────────────────────────────── */
